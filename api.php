@@ -8,10 +8,10 @@ $dbname = DB_NAME;
 
 $dsn = 'mysql:host=' . $host . ';dbname=' . $dbname . ';charset=utf8';
 $opciones = array(PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-$con = new PDO($dsn, $user, $pass, $opciones);
 
 try {
 	// $con = AbrirConexion();
+	$con = new PDO($dsn, $user, $pass, $opciones);
 	if(isset($_GET['id'])){
 		$id = $_GET['id'];
 		$sql = "SELECT * FROM contactoshospital WHERE idhospital = $id";
