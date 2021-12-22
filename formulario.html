@@ -1,0 +1,13 @@
+<form method="post" id="formIngreso">
+    <h1 id="tituloFormIngreso">INGRESO AL PANEL DE CONTROL</h1>
+    <label for="usuarioIngreso"><p class="tituloin">Usuario (correo electronico):</p></label><br>
+    <input class="formIngreso" type="email" placeholder="Correo" id="usuarioIngreso" name="usuarioIngreso" required>
+    <label for="passwordIngreso"><p class="tituloin">Contraseña (debe contener un numero, un letra mayusula y una minuscula):</p></label>
+    <input class="formIngreso" type="password" placeholder="(8 caracteres minimo)" id="passwordIngreso" name="passwordIngreso" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    <br>
+    <?php
+    $ingreso = new Ingreso();
+    $ingreso -> ingresoController();
+    ?>		
+    <input class="formIngreso" type="submit" value="Enviar">
+</form>
