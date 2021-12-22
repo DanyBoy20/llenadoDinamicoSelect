@@ -2,6 +2,7 @@ const hospital = document.getElementById("hospital");
 const doctor = document.getElementById("doctor");
 const form = document.getElementById("form");
 
+
 addEventListener("load", () => {
   fetch("api.php")
     .then((res) => (res.ok ? Promise.resolve(res) : Promise.reject(res)))
